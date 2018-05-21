@@ -1,21 +1,24 @@
 package com.bobo.blog.web;
 
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.bobo.blog.NotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 @Controller
 public class IndexController {
 
-    @GetMapping("/")
-    public String index(){
-//        int i=9/0;
-        String blog=null;
-        if(blog==null){
-            throw new NotFoundException("BLog is not found...");
-        }
+    @GetMapping("/{id}/{name}")
+    public String index(@PathVariable Integer id, @PathVariable String name){
+
+//        String blog=null;
+//        if(blog==null){
+//            throw new NotFoundException("BLog is not found...");
+//        }
+        System.out.println("--------id----------name------------");
         return "index";
     }
 }
