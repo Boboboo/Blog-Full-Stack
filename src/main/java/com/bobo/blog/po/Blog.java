@@ -28,24 +28,19 @@ public class Blog {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
+    @ManyToOne
+    private Type type;
+
+    @ManyToMany(cascade = {CascadeType.PERSIST})
+    private List<Tag> tags=new ArrayList<>();
+
+    @ManyToOne
+    private User user;
+
+    @OneToMany(mappedBy = "blog")
+    private List<Comment> comment=new ArrayList<>();
+
     public Blog() {
-    }
-
-
-    public Blog(Long id, String title, String content, String firstPicture, String flag, Integer views, boolean appreciation, boolean shareStatement, boolean commentabled, boolean published, boolean recommend, Date createTime, Date updateTime) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.firstPicture = firstPicture;
-        this.flag = flag;
-        this.views = views;
-        this.appreciation = appreciation;
-        this.shareStatement = shareStatement;
-        this.commentabled = commentabled;
-        this.published = published;
-        this.recommend = recommend;
-        this.createTime = createTime;
-        this.updateTime = updateTime;
     }
 
 
@@ -151,6 +146,38 @@ public class Blog {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Comment> getComment() {
+        return comment;
+    }
+
+    public void setComment(List<Comment> comment) {
+        this.comment = comment;
     }
 
     @Override
