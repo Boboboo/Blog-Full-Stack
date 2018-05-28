@@ -14,3 +14,27 @@
 .me_color{
     color:grey
 }
+
+.me_padding_mini{
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+.me_padding_large{
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+.me_margin_mini{
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+
+.me_margin_large{
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+}
+
+.me_text{
+    color: #333 !important;
+}
+
+
