@@ -37,4 +37,24 @@
     color: #333 !important;
 }
 
+/*position*/
+.me_right_top{
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.me_mobile_show{
+    display: none !important;
+}
+
+@media screen and (max-width:768px){
+    .me_mobile_hide{
+        display: none !important;
+    }
+    .me_mobile_show{
+        display: block !important;
+    }
+}
+
 
