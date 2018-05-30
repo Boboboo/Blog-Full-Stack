@@ -1,3 +1,10 @@
+body{
+    background: url("../image/bg.png");
+}
+
+.me_container_small{
+
+}
 .me_nav{
     padding-top:0.2em  !important;
     padding-bottom:0.2em  !important;
@@ -19,6 +26,14 @@
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
 }
+.me_padding_small{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.me_padding_small_all{
+    padding:1em !important;
+
+}
 .me_padding_large{
     padding-top: 4em !important;
     padding-bottom: 4em !important;
@@ -35,6 +50,26 @@
 
 .me_text{
     color: #333 !important;
+}
+
+/*position*/
+.me_right_top{
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.me_mobile_show{
+    display: none !important;
+}
+
+@media screen and (max-width:768px){
+    .me_mobile_hide{
+        display: none !important;
+    }
+    .me_mobile_show{
+        display: block !important;
+    }
 }
 
 
