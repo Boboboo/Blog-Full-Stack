@@ -59,6 +59,7 @@ body{
     right:0;
 }
 
+
 .me_mobile_show{
     display: none !important;
 }
@@ -69,6 +70,9 @@ body{
     }
     .me_mobile_show{
         display: block !important;
+    }
+    .me_mobile_wide{
+        width:100% !important;
     }
 }
 
